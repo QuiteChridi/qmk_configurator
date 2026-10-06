@@ -17,11 +17,7 @@
       <font-awesome-icon icon="trash" size="lg" fixed-width />
     </button>
     <button
-      class="ui-button"
-      :class="{ active: copyMode }"
-      v-tooltip="$t('layer.copyTitle')"
-      @click="copyMode = !copyMode"
-    >
+      class="ui-button" :class="{ active: copyMode }" v-tooltip="$t('layer.copyTitle')" @click="copyMode = !copyMode">
       <font-awesome-icon icon="copy" size="lg" fixed-width />
     </button>
   </div>
