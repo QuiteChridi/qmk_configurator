@@ -17,10 +17,10 @@
       <font-awesome-icon icon="trash" size="lg" fixed-width />
     </button>
     <button
-      class="ui-button copy-layer"
+      class="ui-button"
       :class="{ active: copyMode }"
       v-tooltip="$t('layer.copyTitle')"
-      @click="toggleCopyMode"
+      @click="copyMode = !copyMode"
     >
       <font-awesome-icon icon="copy" size="lg" fixed-width />
     </button>
@@ -94,9 +94,6 @@ export default {
         });
         this.$store.commit('keymap/setDirty');
       }
-    },
-    toggleCopyMode() {
-      this.copyMode = !this.copyMode;
     },
     copyTo(id) {
       this.copyMode = false;

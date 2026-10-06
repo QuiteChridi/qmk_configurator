@@ -336,7 +336,7 @@ const mutations = {
   copyLayer(state, { from, to }) {
     // deep copy so the two layers don't share key objects (e.g. contents)
     Vue.set(state.keymap, to, cloneDeep(state.keymap[from]));
-    state.dirty = true;
+    mutations.setDirty(state);
   },
   setDirty(state) {
     state.dirty = true;
