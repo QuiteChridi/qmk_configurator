@@ -267,6 +267,10 @@ html {
         background: #ccc;
         color: #999;
       }
+      &.copy-layer.active {
+        background-color: #2e7d32;
+        box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #2e7d32;
+      }
     }
     #terminal {
       background: #272822;
@@ -285,6 +289,11 @@ html {
     }
     .layers {
       background: #fff;
+      &.copy-target .layer:hover {
+        background: #49ad4c;
+        border-color: #49ad4c;
+        color: #fff;
+      }
     }
     .layer {
       background: #fff;
